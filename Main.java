@@ -15,6 +15,7 @@ public class Main{
 
         ContaCorrente c = new ContaCorrente();
         c.depositar(500); // Depósitos acima de R$ 500,00 ganharão R$ 10,00 de bônus.
+        c.verSaldo("123");
         // Saldo Final : R$ 510,00
 
         ContaPoupanca d = new ContaPoupanca();
