@@ -15,13 +15,13 @@ public class Main{
 
         ContaCorrente c = new ContaCorrente();
         c.depositar(500); // Depósitos acima de R$ 500,00 ganharão R$ 10,00 de bônus.
-        c.verSaldo("123");
+        c.verSaldo("123"); // Ao usar senha, não será cobrado juros.
         // Saldo Final : R$ 510,00
 
         ContaPoupanca d = new ContaPoupanca();
         d.depositar(100); 
         d.sacar(50, "123"); // Não será cobrados juros nessa operação.
-        d.verSaldo("123"); // Não será cobrados juros nessa operação.
+        d.verSaldo("123"); // Ao usar senha, não será cobrado juros.
         // Saldo Final : R$ 50,00
 
     }

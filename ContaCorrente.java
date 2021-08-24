@@ -10,6 +10,7 @@ public class ContaCorrente {
         } else{
             System.out.println("ALERTA !!!! Não possui saldo disponível em conta corrente. Seu saldo disponível é de: R$" + this.saldo);
         }
+        System.out.println("Saque no valor de R$ "  + valor + " foi realizado com sucesso.");
     }
     
     public void zerarConta(String senha){
@@ -32,21 +33,24 @@ public class ContaCorrente {
         } else {
             System.out.println("ERRO AO SACAR, SENHA INCORRETA!!");
         }
+        System.out.println("Saque no valor de R$ "  + valor + " foi realizado com sucesso.");
     }
 
     public void depositar(double valor) {
         this.saldo += valor;
         if (valor >= 500){
+            System.out.println("Bônus de R$10.00 concedido.");
             bonus();
         }
+        System.out.println("Deposito de R$ " + valor + " realizado com sucesso");
     }
 
     public String verSaldo(){
         jurosVer();
         System.out.println("===== SALDO DISPONÍVEL EM CONTA CORRENTE =====");
         System.out.println("Sua conta corrente tem um saldo dê R$ " + this.saldo);
-        System.out.println("R$ 1.00 é cobrado de juros pra ver o saldo.");
-        System.out.println("R$ 4.00 são cobrados de juros de saque");
+        System.out.println("R$ 1.00 foi cobrado para ver o saldo.");
+        System.out.println("R$ 4.00 foram cobrados para realizar o saque.");
         System.out.println("Depósitos acima de R$ 500,00 ganharão R$ 10,00 de bônus.");
         System.out.println("===========================================");
 		return null;
